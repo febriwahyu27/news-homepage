@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+body{
+    display: grid;
+    grid-template-areas:
+    'navbar navbar'
+    'menu main'
+    'news news'
+    'footer footer';
+}
+.navbar{
+    width: 100%;
+    grid-area: navbar;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+.navbar .btn-menu{
+    display: none;
+}
+.navbar ul{
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+    align-items: center;
+}
+.navbar ul li{
+    list-style: none;
+}
+.menu{
+    width: 100%;
+    grid-area: menu;
+    margin: 20px 0 0 0;
+    box-sizing: border-box;
+}
+.menu img{
+    width: 55em;
+    margin-left: 40px;
+}
+.menu .judul{
+    display: flex;
+    justify-content: space-between;
+    width: 55em;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.menu .judul h1{
+    font-size: 3.5em;
+    letter-spacing: 5px;
+    font-weight: 700;
+    width: 45%;
+}
+.menu .judul .paragraf{
+    width: 50%;
+}
+.paragraf p{
+    font-size: 16px;
+    color: grey;
+    letter-spacing: 1px;
+    height: 100px;
+}
+.paragraf a{
+    text-transform: uppercase;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 10px 30px;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    background-color: hsl(5, 85%, 63%);
+}
+
+.main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 40px;
+    color: white;
+    padding: 30px 30px;
+    background-color: hsl(240, 100%, 5%);
+}
+.main h1{
+    font-size: 2.5em;
+    color: hsl(35, 77%, 62%);
+}
+.main > div{
+    height: auto;
+}
+.main > div h3{
+    margin: 0 0 20px 0;
+}
+.main > div p{
+    font-size: 15px;
+}
+
+.sidebar{
+    position: absolute;
+    display: none;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    background-color: white;
+}
+
+.gaming{
+    display: flex;
+    justify-content: space-between;
+    grid-area: news;
+    margin: 40px 0 40px 0;
+    padding: 0 40px;
+}
+.gaming > div img{
+    float: left;
+    margin: 0 20px 0 0;
+}
+.gaming > div h2{
+    color: hsl(236, 13%, 42%);
+}
+.gaming > div h3{
+    margin: 5px 0;
+}
+footer{
+    grid-area: footer;
+}
+footer .attribution {
+    padding: 10px 0;
+    color: white;
+    background-color: #2B3467;
+}
+footer .attribution  a{
+    color: #BAD7E9;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 950px) {
+    body{
+        display: block;
+    }
+    .navbar{
+        padding: 20px 20px;
+    }
+    .navbar ul{
+        display: none;
+    }
+    .navbar .btn-menu{
+        display: block;
+    }
+
+    .menu{
+        margin: 0 0 20px 0;
+        padding: 0 20px;
+    }
+    .menu img{
+        height: 686px;
+        width: 600px;
+        width: 100%;
+        margin: 0;
+    }
+    .menu .judul{
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+    .menu .judul h1{
+        font-size: 2em;
+        letter-spacing: 5px;
+        font-weight: 700;
+        width: 100%;
+        margin: 20px 0 0 0;
+    }
+    .menu .judul .paragraf{
+        width: 100%;
+    }
+    .paragraf p{
+        font-size: 16px;
+        color: grey;
+        letter-spacing: 1px;
+        height: 100px;
+    }
+    .paragraf a{
+        text-transform: uppercase;
+        text-decoration: none;
+        box-sizing: border-box;
+        padding: 10px 30px;
+        color: white;
+        font-family: 'Outfit', sans-serif;
+        font-size: 15px;
+        background-color: hsl(5, 85%, 63%);
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        margin: 30px 20px 0 20px;
+        color: white;
+        padding: 30px 20px;
+        height: 500px;
+        background-color: hsl(240, 100%, 5%);
+    }
+    .main h1{
+        font-size: 2.5em;
+        color: hsl(35, 77%, 62%);
+    }
+    .main > div h3{
+        margin: 0 0 20px 0;
+    }
+    .main > div p{
+        font-size: 15px;
+    }
+
+    .sidebar{
+        position: fixed;
+        z-index: 1;
+        display: none;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 60%;
+        transition: 1s;
+        animation-duration: 2s;
+        background-color: white;
+    }
+    .sidebar .close img{
+        float: right;
+        margin: 20px 20px 0 0;
+    }
+    .sidebar ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 100px 0 0 0;
+        padding: 0 20px;
+        height: 12em;
+    }
+    .sidebar ul li{
+        list-style: none;
+    }
+    .sidebar ul li a{
+        color: black;
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .dark{
+        position: fixed;
+        z-index: 1;
+        display: none;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 40%;
+        background-color: black;
+        filter: opacity(50%);    
+    }
+
+    .gaming{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+        margin: 30px 20px;
+    }
+    .gaming > div{
+        margin: 10px 0;
+    }
+    .gaming > div img{
+        float: left;
+        margin: 0 20px 0 0;
+    }
+    .gaming > div h2{
+        color: hsl(236, 13%, 42%);
+    }
+    .gaming > div h3{
+        margin: 5px 0;
+    }
+}
